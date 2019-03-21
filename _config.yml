@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
+title: Pino's Creative Factory
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -26,15 +26,15 @@ github_username:  jekyll
 
 # About/contact
 author:
-  name: LEE HYUNJOO
-  description: 초보몽키(LEE HYUNJOO)
+  name: JEONG JINBAE
+  description: 92pino(JEONG JINBAE)
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
-    github:    https://github.com/wayhome25
-    facebook:  https://www.facebook.com/wayhome25
+    github:    https://github.com/92pino
+    #facebook:  https://www.facebook.com/wayhome25
     # twitter:   https://twitter.com/Li_Zhihao
     # weibo:     http://weibo.com/41173780
-    email:    mailto:siwabada@gmail.com
+    email:    mailto:jjb8382@gmail.com
 
 # Build settings
 markdown: kramdown

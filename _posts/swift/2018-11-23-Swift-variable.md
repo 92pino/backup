@@ -9,17 +9,6 @@ category: swift
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
 ---
 
----
-layout: post
-title: Git이란 무엇일까?
-categories: [git]
-excerpt: ""
-comments: true
-share: true
-tags: [Git]
-date: 2019-03-07
----
-
 # 변수와 상수
 <hr>
 
