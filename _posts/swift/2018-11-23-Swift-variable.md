@@ -2,8 +2,7 @@
 title: Swift - 변수
 layout: post
 date: 2018-11-23
-headerImage: false
-tag: - Swift
+tag: Swift
 comments: true
 category: swift
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
