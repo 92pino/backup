@@ -186,4 +186,7 @@
         background-color: #f8f8f8
     }
 
+.wrapper {max-width:800px;}
 .trigger .page-link:first-child {display:none;}
+.home .tag-cloud {padding-bottom:2rem; margin-bottom:2rem; border-bottom:1px solid #eee; margin-left:0;}
+.home .tag-cloud span {font-size: 85%  !important;}

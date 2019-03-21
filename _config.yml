@@ -24,6 +24,18 @@ url: "https://92pino.github.io/" # the base hostname & protocol for your site, e
 twitter_username: jekyllrb
 github_username:  jekyll
 
+# About/contact
+author:
+  name: LEE HYUNJOO
+  description: 초보몽키(LEE HYUNJOO)
+  contact:
+    # linkedin:  https://www.linkedin.com/in/lizhihao
+    github:    https://github.com/wayhome25
+    facebook:  https://www.facebook.com/wayhome25
+    # twitter:   https://twitter.com/Li_Zhihao
+    # weibo:     http://weibo.com/41173780
+    email:    mailto:siwabada@gmail.com
+
 # Build settings
 markdown: kramdown
 theme: minima
