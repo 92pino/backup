@@ -86,12 +86,11 @@
 /* Block Quotes
  * ============================================== */
     blockquote {
-        color: #BBB;
+        color: #AAA;
         border-left: 4px solid $brand-color;
         padding-left: $spacing-unit / 2;
         font-size: 17px;
         letter-spacing: -1px;
-        font-style: italic;
 
         > :last-child {
             margin-bottom: 0;
@@ -100,20 +99,20 @@
 
 /* Code Blocks
  * ============================================== */
-    pre,
+    /*pre,
     code {
         font-size: 13px;
         border: 1px solid $grey-color-light;
         font-family: Menlo, Monaco, "Andale Mono", serif;
     }
 
-    code {
+    /*code {
         padding: 1px 3px;
         background-color: #FFF;
         border-radius: 5px;
-    }
+    }*/
 
-    pre {
+    /*pre {
         border-radius: 3px;
         padding: 8px 12px;
         overflow-x: scroll;
@@ -125,7 +124,8 @@
             padding-right: 0;
             padding-left: 0;
         }
-    }
+    }*/
+
 
 /* Wrapper
  * ============================================== */
@@ -190,3 +190,14 @@
 .trigger .page-link:first-child {display:none;}
 .home .tag-cloud {padding-bottom:2rem; margin-bottom:2rem; border-bottom:1px solid #eee; margin-left:0;}
 .home .tag-cloud span {font-size: 85%  !important;}
+.post h2 {margin:2em 0 1em 0;}
+h2, h3 {color: #ec4c6a;}
+code.highlighter-rouge {background-color: rgba(27,31,35,.05); border-radius: 3px; font-size: 85%; margin: 0; padding: .2em .4em;}
+.site-header .logo_tit {position:absolute; top:50%; left:100px; margin-top:-18px; font-size:24px; font-weight: 700 !important; line-height: 1.5; letter-spacing: 0.05em; color:dimgray;}
+@media all and (max-width: 880px){
+  .site-header .logo_tit {left:30px;}
+}
+
+@media all and (max-width: 700px) {
+  .site-header .logo_tit {left:0; margin-top:-15px; padding:0 15px; font-size:20px;}
+}
