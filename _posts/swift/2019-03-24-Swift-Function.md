@@ -1,7 +1,7 @@
 ---
-title: Swift - 함수
+title: Swift - 함수(Function)
 layout: post
-date: 2019-02-27 00:00
+date: 2019-03-24 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag: Swift
@@ -91,7 +91,7 @@ func welcome(from myName: String, _ name: String) -> String {
 print(welcome(from: "Pino", "방문자"))
 // 어서오세요 방문자님! Pino의 블로그에 오신것을 환영합니다!
 ```
-
+<br>
 welcome의 호출 값을 보시면 매개변수만 있을 때와는 다르게 호출된다는게 보이실거에요
 매개변수는 함수 내부에서만 사용 가능하고 전달인자 레이블은 함수 외부에서 사용할수 있습니다.<br>
 그리고 만약 전달인자 레이블을 사용하고 싶지 않다면 `_` 를 사용하여 생략이 가능합니다.
@@ -113,3 +113,84 @@ print(movieTime("캡틴마블"))
 print(movieTime("캡틴마블", time: 5))
 // 캡틴마블는(은) 5시에 시작합니다.
 ```
+
+<br>
+__✔︎ 가변 매개변수와 입출력 매개변수__
+
+매개변수가 몇개가 들어올지 처음부터 알면 참 좋겠지만..<br> 코드를 쓰다보면 가변 매개변수가 몇개 들어와야될지 난감한 상황이 있는데<br>
+이때 사용하는게 ```가변 매개변수```입니다. 가변 매개변수는 타입 뒤 ...를 사용하여 작성할수 있습니다.<br>
+이 가변 매개변수는 0개 이상의 값을 받아올 수 있으며, 인자 값은 배열처럼 사용할수 있습니다.
+
+```swift
+func whatIeat(me: String, foods names: String...) -> String {
+  var result: String = ""
+
+  for food in names {
+    result += "\(food)도 먹고 "
+  }
+
+  return "\(me)는 \(result)싶다"
+}
+
+print(whatIeat(me: "Pino", foods: "Steak", "Macaroon", "Americano"))
+// Pino는 Steak도 먹고 Macaroon도 먹고 Americano도 먹고싶다
+```
+
+<br>
+함수로 전달한 파라미터의 값을 함수 안에서 변경했을 때 변경된 값을 함수 밖에서 다시 참조하기 위해 스위프트에서는 ```inout``` 키워드를 사용합니다.<br>
+그리고 함수를 호출할 때 전달하는 변수 앞에 &를 붙여 사용합니다.<br><br>
+inout 키워드는 함수에 변수를 전달하고 다시 그 변수를 참조할 수 있도록 하는데요.<br>
+코드를 보면 이해하기가 더 쉬울겁니다.
+
+```swift
+func midnightSnack(food: inout String) {
+  print("\(food) 먹고싶다..")
+  food = "피자"
+}
+
+var food2 = "족발"
+midnightSnack(food: &food2)
+
+// 족발 먹고싶다...
+```
+
+<br>
+함수의 전달인자로 값을 전달할 때는 보통 Call By Value(값 복사)가 일어나 전달을 하게되는데<br>
+값에 의한 호출(Call by Value)와 참조에 의한 호출(Call by Reference)는 추후에<br>
+클래스와 구조체 포스팅 할때 따로 정리해서 포스팅 해놓겠습니다.
+
+## 반환 타입
+
+위에 이미 몇번 코드상으로 언급은 했지만 다시 한번 반환 타입에 대해 간단히 언급하고 넘어가려 합니다.<br>
+함수는 특정 연산을 실행후 결과값을 반환하는데요<br>
+`() -> 타입`을 통해 반환값이 있는 함수를 만들수도 있고,<br>
+ 반대로 결과값을 반환하지 않는 함수에서는<br>
+`() -> Void`를 사용해 반환값이 없음을 표시하거나 -> Void를 생략하고 ()만 사용해서 함수를 나타냅니다.
+
+```swift
+func studySwift() -> String {
+  return "swift 공부를 합시다."
+}
+
+print(studySwift())
+// swift 공부를 합시다.
+
+func writePosting(who myName: String, what study: String) {
+  print("\(myName)는 블로그에 \(study) 포스팅을 하고있습니다.")
+}
+
+writePosting(who: "Pino", what: "Swift")
+// Pino는 블로그에 Swift 포스팅을 하고있습니다.
+
+func end() -> Void {
+  print("반환타입 끝!")
+}
+
+end()
+// 반환타입 끝!
+```
+
+<br>
+Thanks for your reading, this article is provided by [Pino](https://github.com/92pino) If reproduced,
+please indicate the source：
+Pino（[https://github.com/92pino](https://github.com/92pino)）
