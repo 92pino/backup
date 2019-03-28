@@ -63,9 +63,7 @@ Swift에서는 크게 두가지의 반복문이 존재합니다.
 가장 기본적인 For~in 구문은 다음과 같은 형태로 이루어집니다.
 ```swift
 for <루프 상수> in <순회 대상> {
-
   <실행할 구문>
-
 }
 ```
 <br>
@@ -124,9 +122,7 @@ print("\(keyword)")
 while 구문은 다음과 같은 형태로 이루어집니다.
 ```swift
 while <조건식> {
-
   <실행할 구문>
-
 }
 ```
 <br>
@@ -137,9 +133,7 @@ while <조건식> {
 ```swift
 var n = 2
 while n < 1000 {
-
   n = n * 2
-
 }
 
 print("n = \(n)")
@@ -150,9 +144,7 @@ print("n = \(n)")
 
 ```swift
 repeat {
-
   <실행할 구문>
-
 }
 while <조건식>
 ```
@@ -166,9 +158,7 @@ swift에만 있는 문법으로 다른 언어에서는 do~while 구문에 해당
 var n = 1024
 
 repeat {
-
   n = n * 2
-
 }
 
 while n < 1000
