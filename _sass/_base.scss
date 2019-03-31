@@ -188,11 +188,13 @@
 
 .wrapper {max-width:800px;}
 .trigger .page-link:first-child {display:none;}
-.home .tag-cloud {padding-bottom:2rem; margin-bottom:2rem; border-bottom:1px solid #eee; margin-left:0;}
-.home .tag-cloud span {font-size: 85%  !important;}
+.tag-cloud {padding-bottom:2rem; margin-bottom:2rem; border-bottom:1px solid #eee; margin-left:0;}
+.tag-cloud span {font-size: 85%  !important;}
 .post h2 {margin:2em 0 1em 0;}
 h2{color: #ec4c6a;}
 h3 {color: #009fd5;}
+#archives h3 {color:#1818189c;}
+#archives h4 a {color:#ef5e33ab;}
 code.highlighter-rouge {background-color: rgba(27,31,35,.05); border-radius: 3px; font-size: 85%; margin: 0; padding: .2em .4em;}
 .site-header .logo_tit {position:absolute; top:50%; left:100px; margin-top:-18px; font-size:24px; font-weight: 700 !important; line-height: 1.5; letter-spacing: 0.05em; color:dimgray;}
 @media all and (max-width: 880px){
