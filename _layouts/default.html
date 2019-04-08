@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
   <body>
 
-    {% include header.html %}
+    {% include navigation.html %}
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <ins class="adsbygoogle"
          style="display:block; text-align:center;"
@@ -16,13 +16,10 @@
     <script>
          (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+    <main>
+      {{ content }}
+    </main>
 
     {% include footer.html %}
-
   </body>
 </html>
