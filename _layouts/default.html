@@ -2,8 +2,12 @@
 layout: compress
 ---
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="{% if page.language %}{{ page.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}">
 {% include head.html %}
+=======
+<html>
+>>>>>>> parent of 8a9fee9... git blog theme change
 
 <body class="home-template">
 
@@ -24,5 +28,28 @@ layout: compress
     </div>
 </body>
 
+<<<<<<< HEAD
 {% include global.html %}
+=======
+    {% include header.html %}
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-layout="in-article"
+         data-ad-format="fluid"
+         data-ad-client="ca-pub-8241016435532005"
+         data-ad-slot="1296381324"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+>>>>>>> parent of 8a9fee9... git blog theme change
 </html>
