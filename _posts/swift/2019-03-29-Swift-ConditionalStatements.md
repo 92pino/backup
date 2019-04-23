@@ -5,7 +5,7 @@ date: 2019-03-29 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag: Swift
-category: swift
+category: swift, Conditional Statements
 author: pino
 description:
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'

@@ -1,55 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<footer class="site-footer">
-    <button class="go-to-top"></button>
-    <p class="copyright"><a href="{{ "" | absolute_url }}" title="{{ site.title }}">{{site.title}}</a> &copy; {{ site.time | date: '%Y' }} | <a href="{{ "/feed.xml" | absolute_url }}" title="RSS Feed">RSS Feed</a></p>
-    <p class="poweredby">powered by <a href="https://jekyllrb.com/" title="Jekyll">Jekyll</a> with the <a href="https://github.com/jwillmer/jekyllDecent" title="jekyllDecent Theme">jekyllDecent</a> theme</p>
+<footer>
+  <span>
+    &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Made with Jekyll using the <a href="https://github.com/chesterhow/tale/">Tale</a> theme.
+  </span>
 </footer>
-=======
-=======
->>>>>>> parent of 8a9fee9... git blog theme change
-<div class="footer center">
-  {% if site.author.contact %}
-    {% assign len = site.author.contact | size %}
-    {% assign current_index = 0 %}
-    <div class="sidebar-personal-info-section">
-      <p> Contact Me
-      {% for contact in site.author.contact %}
-      {% assign iconname = contact[0] %}
-      {% if contact[0] == 'email' %}
-      {% assign iconname = 'envelope' %}
-      {% endif %}
-      <a href="{{ contact[1] }}">
-        <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
-      </a>
-      {% assign current_index = current_index | plus: 1 %}
-      {% if current_index != len %}|{% endif %}
-      {% endfor %}
-      <br>
-      <span class="notice">
-
-      잘못된 내용이 있다면 편하게 댓글 남겨주세요!
-      </span>
-      </p>
-    </div>
-    {% endif %}
-
-  Copyright &copy; <a href=http://diezcami.github.io target="_blank">Camille Diez</a> 2015<BR />
-  Powered by <a href=http://jekyllrb.com target="_blank">Jekyll</a>
-
-</div>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8241016435532005"
-     data-ad-slot="9917160306"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<<<<<<< HEAD
->>>>>>> parent of 8a9fee9... git blog theme change
-=======
->>>>>>> parent of 8a9fee9... git blog theme change
