@@ -1,25 +1,28 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% if page.language %}{{ page.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}">
+{% include head.html %}
 
-  {% include head.html %}
+<body class="home-template">
 
-  <body>
+    <div class="site-wrapper">
+        {% include header.html %}
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <ins class="adsbygoogle"
+               style="display:block; text-align:center;"
+               data-ad-layout="in-article"
+               data-ad-format="fluid"
+               data-ad-client="ca-pub-8241016435532005"
+               data-ad-slot="1296381324"></ins>
+          <script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        {{ content }}
+        {% include footer.html %}
+    </div>
+</body>
 
-    {% include navigation.html %}
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
-         data-ad-layout="in-article"
-         data-ad-format="fluid"
-         data-ad-client="ca-pub-8241016435532005"
-         data-ad-slot="1296381324"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-    <main>
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-  </body>
+{% include global.html %}
 </html>

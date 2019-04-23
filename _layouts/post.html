@@ -1,59 +1,37 @@
 ---
 layout: default
 ---
+<main class="content" role="main">
+    <article class="post single-post" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="post">
-  <div class="post-info">
-    <span>Written by</span>
-    {% if page.author %}
-        {{ page.author }}
-    {% else %}
-        {{ site.author.name }}
-    {% endif %}
+        <header class="post-header short-diver">
+            <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+            <section class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+                on
+                {% for tag in page.tags limit:5 %}
+                <span>{{ tag }}</span>
+                {% endfor %}
+            </section>
+        </header>
 
-    {% if page.date %}
-      <br>
-      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
-    {% endif %}
-  </div>
+        <section class="post-content short-diver" itemprop="articleBody">
+            {{content}}
+        </section>
 
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-line"></div>
+        <footer class="post-footer">
+            {% include authorinfo.html param=page.author %}
+        </footer>
 
-  {{ content }}
+        {% if page.comments %}
+    		<div class="comments">
+    			<a href="javascript:;" class="view-comments"><i class="fa fa-comments"></i>View Comments...</a>
+    			<div id="disqus_thread"></div>
+    		</div>
+    		{% endif %}
 
-</div>
+    </article>
+</main>
 
-<div class="pagination">
-  {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
-  {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
-  {% endif %}
-  <!-- disqus 영역 -->
-
-  <div id="disqus_thread"></div>
-  <script>
-
-  /**
-  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-  /*
-  var disqus_config = function () {
-  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-  };
-  */
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://92pino-1.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-  <!-- //disqus 영역 -->
-  <a href="#" class="top">Top</a>
-</div>
+{% include photoswipe.html %}
+{% include post_scripts.html %}
