@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 _site
 .sass-cache
 .jekyll-metadata
 /.vs
 =======
+=======
+>>>>>>> parent of 8a9fee9... git blog theme change
 ### Jekyll ###
 _site
 .sass-cache
@@ -85,4 +88,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
+<<<<<<< HEAD
+>>>>>>> parent of 8a9fee9... git blog theme change
+=======
 >>>>>>> parent of 8a9fee9... git blog theme change
