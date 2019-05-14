@@ -1,119 +1,35 @@
-# Pino.swift
+# NexT
 
-[![Gem Version](https://badge.fury.io/rb/tale.svg)](https://badge.fury.io/rb/tale)
+> 精于心，简于形
 
-Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here](https://chesterhow.github.io/tale/).
+NexT 是由 [Hexo NexT](https://github.com/iissnan/hexo-theme-next) 移植而来的 Jekyll 主题。<!--commit: f951075d9b739d26b42472431995fa68d08796aa-->
 
-![Tale screenshot](http://i.imgur.com/pXZrtmo.png)
+<a href="http://simpleyyt.github.io/jekyll-theme-next/" target="_blank">在线预览 Preview</a> | <a href="http://simpleyyt.com" target="_blank">Yitao's Blog</a> | <a href="http://theme-next.simpleyyt.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
 
-## Features
-- Easy installation
-- Compatible with GitHub Pages
-- Responsive design (looks just as good on mobile)
-- Syntax highlighting, with the help of Pygments
-- Markdown and HTML text formatting
-- Pagination of posts
+[![Join the chat at https://gitter.im/simpleyyt/jekyll-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jekyll-theme-next/lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-## Installation
-There are 3 ways to install this theme
+![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
-1. Install it as a Ruby Gem (for self-hosted sites)
-2. Install it with the `jekyll-remote-theme` plugin (for GitHub Pages hosted sites)
-3. Fork the project directly
 
-### Ruby Gem method
-1. Add this line to your `Gemfile`:
+## 浏览器支持 Browser support
 
-```ruby
-gem "tale"
-```
+![Browser support](http://iissnan.com/nexus/next/browser-support.png)
 
-2. Install the theme's gems and dependencies:
 
-```bash
-$ bundle
-```
+## 贡献 Contributing
 
-3. In `_config.yml` add these lines:
+欢迎提交问题与需求，修复代码。
 
-```yaml
-theme:      tale
 
-permalink:  /:year-:month-:day/:title
-paginate:   5
-```
+## 开发 Development
 
-Remove any other `theme:` lines.
+NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。
 
-4. Rename `index.md` to `index.html`. Without this, the `jekyll-paginate` gem will not work.
+NexT is built for easily use with elegant appearance. First things first, always keep things simple.
 
-5. In `about.md`, change the `layout:` field to `post`:
 
-```Markdown
-layout: post
-```
+## 捐赠
 
-### GitHub Pages method
-1. Add these 2 lines in to your `Gemfile`:
+支付宝捐赠链接还是要有的，万一真的有人捐呢。
 
-```ruby
-gem "jekyll-remote-theme"
-gem "jekyll-paginate"
-```
-
-2. Install the newly added gems:
-
-```bash
-$ bundle
-```
-
-3. In `_config.yml` add these lines:
-
-```yaml
-remote_theme: chesterhow/tale
-
-permalink:    /:year-:month-:day/:title
-paginate:     5
-
-plugins:
-  - jekyll-paginate
-  - jekyll-remote-theme
-```
-
-Remove any other `theme:` or `remote_theme:` lines.
-
-4. Rename `index.md` to `index.html`. Without this, the `jekyll-paginate` gem will not work.
-
-5. In `about.md`, change the `layout:` field to `post`:
-
-```Markdown
-layout: post
-```
-
-### Fork method
-1. Fork this repository
-
-2. Delete the unnecessary files/folders: `CODE_OF_CONDUCT.md`, `LICENSE`, `README.md`, `tale.gemspec`
-
-3. Delete the `baseurl` line in `_config.yml`:
-
-```yaml
-baseurl:  "/tale"   # delete this line
-```
-
-## Usage
-Once you've installed the theme, you're ready to work on your Jekyll site. To start off, I would recommend updating `_config.yml` with your site's details.
-
-To build and serve your site, run:
-
-```bash
-$ bundle exec jekyll serve
-```
-
-And you're all set! Head over to http://127.0.0.1:4000/ to see your site in action.
-
-## Contributing
-Found a bug or have a suggestion? Feel free to create an issue or make a pull request!
-
-## License
-See [LICENSE](https://github.com/chesterhow/tale/blob/master/LICENSE)
+![支付宝扫码捐赠](http://7lryc0.com1.z0.glb.clouddn.com/a6x049034plyvjm1rvn4h28%20%281%29.png)
