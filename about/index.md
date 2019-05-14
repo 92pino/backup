@@ -3,11 +3,11 @@ layout: page
 type: about
 ---
 
-이하은 Haeun Lee <br/>
-💌 : sch.haeun@gmail.com <br/>
+정진배 Jinbae Jeong <br/>
+💌 : jjb8382@gmail.com <br/>
 
 
 GitHub<br/>
-https://github.com/Haeuncs
+https://github.com/92pino
 
-2018.07.26 ~
+2019.03.04 ~

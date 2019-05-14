@@ -5,7 +5,7 @@ date: 2019-05-08 00:00
 image: /assets/images/markdown.jpg
 headerImage: false
 tag: Swift
-category: swift, Closure
+category: swift
 author: pino
 description:
 # jemoji: '<img class="emoji" title=":ramen:" alt=":ramen:" src="https://assets.github.com/images/icons/emoji/unicode/1f35c.png" height="20" width="20" align="absmiddle">'
@@ -28,7 +28,7 @@ description:
 안녕하세요 [Pino](https://92pino.github.io) 입니다.<br>
 오늘은 __클로저__ 에 대해 포스팅하려합니다.
 
-## 조건문
+## 클로저
 
 우선 조건문이란 이름 그대로 __"조건"__ 을 따지는 제어문인데요.<br>특정한 조건 아래서만 코드가 실행되게 하는 구문을 말합니다.
 예를 들어 아이디와 비밀번호를 정확하게 입력했을 때 로그인이 가능하게 하는 상황에서 사용되겠네요.
