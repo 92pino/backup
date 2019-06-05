@@ -3,6 +3,7 @@ title:
   category: 카테고리
   tag: 태그
   archives: 아카이브
+  review: Review
   categories: 카테고리
   tags: 태그
   about: About
@@ -15,6 +16,7 @@ menu:
   archives: 아카이브
   categories: 카테고리
   tags: 태그
+  review: Review
   about: About
   search: 검색
   Résumé : Résumé
