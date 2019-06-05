@@ -2,7 +2,6 @@ title:
   archive: 아카이브
   category: 카테고리
   tag: 태그
-  archives: 아카이브
   review: Review
   categories: 카테고리
   tags: 태그
@@ -13,7 +12,6 @@ author: 작성자
 
 menu:
   home: 홈
-  archives: 아카이브
   categories: 카테고리
   tags: 태그
   review: Review

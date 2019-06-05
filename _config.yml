@@ -121,10 +121,9 @@ index_with_subtitle: false
 menu:
   home: /
   categories: /categories/
-  about: /about/
-  archives: /archives/
-  tags: /tags/
   review: /review/
+  about: /about/
+  tags: /tags/
   # Résumé : https://www.notion.so/HAEUN-3817f3e8065c4b14a9a4e4feb00bb0e9
   # sitemap: /sitemap.xml
   #commonweal: /404.html
