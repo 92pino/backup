@@ -14,6 +14,8 @@ description:
 안녕하세요 [Pino](https://92pino.github.io) 입니다.<br>
 오늘은 프로퍼티 종류 중 __저장 프로퍼티(Stored Properties)__ 에 대해 포스팅하려합니다.<br>
 
+---
+
 저장프로퍼티를 공부하기 이전에 프로퍼티가 무엇인지 간단하게 짚어보고 가겠습니다~
 
 ## Properties
