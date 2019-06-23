@@ -88,7 +88,90 @@ Pizza구조체와 동일하게 변수 저장 프로퍼티, 상수 저장 프로�
 클래스는 구조체와는 다르게 옵셔널이 아니라면 프로퍼티의 기본값을 지정해주거나 사용자 이니셜라이저를 통해 반드시 초기화를 해주어야합니다.<br>
 (클래스 저장프로퍼티를 사용할때 init을 빼먹지말고 꼭 사용해야합니다!)
 
+### Lazy Properties (지연 저장 프로퍼티)
+지연 저장 프로퍼티는 값이 호출되기 전까지는 계산되지 않는 프로퍼티입니다.
 
+야곰님의 책에서 보면 클래스 인스턴스의 저장 프로퍼티로 다른 클래스 인스턴스나 구조체 인스턴스를 할당해야 할 때 초기화하면서 저장 프로퍼티로 쓰이는 인스턴스를 한번에 생성하면서 모든 저장 프로퍼티를 사용할 필요가 없을 때 지연 저장 프로퍼티를 사용한다고 하는데요
+
+공식 홈페이지 lazy properties 코드를 보면서 다시 한번 이해해보도록 하겠습니다 :]
+
+```swift
+class DataImporter {
+    // DataImporter는 외부에서 데이터를 가져오는 클래스로 초기화 하는데 매우 많은 시간이 소요된다고 가정합니다.
+    var filename = "data.txt"
+    // 외부 파일명은 "data.txt"
+}
+
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+}
+
+let manager = DataManager() // DataManager의 인스턴스를 생성 (이미 초기화가 되어있어서 init이 필요없음)
+manager.data.append("Some data") // DataManager의 data 배열에 "Some data"를 append시킨다.
+manager.data.append("Some more data") // DataManager의 data 배열에 "Some more data"를 또 append시킨다.
+// 하지만 DataImporter 인스턴스는 이 시점에 생성돼 있지 않습니다.
+```
+
+```manager```에 데이터를 아무리 많이 넣어도 실제도 ```DataImporter```라는 import 프로퍼티가 생성이 되지 않고 있네요<br>
+바로 importer라는 DataImporter의 인스턴스가 __lazy__ 로 선언이 되어있기 때문인데요<br>
+lazy로 선언을 하지 않았다면 바로바로 importer가 생성이 되었겠지만 ```manager.importer.filename```이 호출되기 전까지는 생성되지 않습니다~
+
+한번 값이 생성되는지 봐볼까요?
+```swift
+print(manager.importer.filename)    // "data.txt"
+```
+
+다른 코드를 봐보도록 하겠습니다. (예제는 많은게 좋으니까요~)<br>
+이번엔 야곰님 책의 예제인데요
+
+```swift
+struct CoordinatePoint {
+    var x: Int = 0  // 저장 프로퍼티
+    var y: Int = 0  // 저장 프로퍼티
+}
+// 초기화를
+class Position {
+    lazy var point: CoordinatePoint = CoordinatePoint()
+    let name: String
+
+    init(name: String) {
+        self.name = name
+    }
+}
+
+let pinoPosition: Position = Position(name: "pino")
+```
+
+여기까지는 point 프로퍼티의 CoordinatePoint가 생성이 되지 않는데요
+
+
+```swift
+print(pinoPosition.point)   // x: 0, y: 0
+```
+
+point 프로퍼티로 처음 접근할 때 point 프로퍼티의 CoordinatePoint가 생성이 됩니다.
+
+지연 저장 프로퍼티를 잘 사용하면 불필요한 성능저하나 공간 낭비를 줄일 수 있다고 하는데요<br>
+다시 한번 개념을 정리해 보자면
+
+1. 지연 저장 프로퍼티로 선언하기 위해서는 프로퍼티 선언 앞에 ```lazy``` 키워드를 선언해 주어야 하고, 꼭 __var__ 변수 선언을 해야 합니다!<br>
+(상수로 선언할 경우 인스턴스가 완전히 생성되기 전에 초기화해야하기 때문에 값을 할당하는 지연 저장 프로퍼티와는 맞지 않기 때문이죠)
+2. 지연 저장 프로퍼티는 주로 복잡한 클래스나 구조체를 구현할 때 많이 사용
+3. 외부요인에 의해 초기화가 완료될때가지 값을 알 수 없는 프로퍼티의 값을 초기화 할때 유용
+4. 지연 저장 프로퍼티를 잘 사용하면 불필요한 성능저하나 공간 낭비를 줄일 수 있습니다.
+
+> 다중 스레드 환경에서 지연 저장 프로퍼티에 동시다발적으로 접근할 때에는 한번만 초기화 된다는 보장이 없습니다. 생성되지 않은 지연저장 프로퍼티에 많은 스레드가 비슷한 시점에 접근한다면, 여러번 초기화 될 수 있습니다.
+
+
+먼저 저장 프로퍼티에 대해 알아보았는데요. 지연 저장 프로퍼티가 확 와닿지는 않지만 사용법을 알았으니 더 연습해보면서 개념 이해를 해야겠어요.
+
+다음번에는 [연산 프로퍼티]()에 대해 포스팅을 하겠습니다. :)
+
+## 참고
+- swift 공식 문서 - [The Swift Programming Language](https://docs.swift.org/swift-book/LanguageGuide/Properties.html)
+- zedd님 - [Stored Properties](https://zeddios.tistory.com/243)
+- 야곰님 - 스위프트 프로그래밍
 
 Thanks for your reading, this article is provided by [Pino](https://github.com/92pino) If reproduced,
 please indicate the source：
