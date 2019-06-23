@@ -1,0 +1,27 @@
+---
+layout: post
+title: ARC (Automatic Reference Counting)
+date:   2019-06-22 00:00:00 -0701
+category: [theory]
+tags: [Swift, Theory, Arc]
+comments: true
+---
+
+안녕하세요 [Pino](https://92pino.github.io) 입니다.<br>
+오늘은 면접 질문 포스팅을 하다 __ARC__ 에 대해서 더 깊게 알아보고자 포스팅하려합니다.<br>
+
+---
+<br>
+
+Swift에서 매번 전달할 때마다 값을 복사해 전달하는 값 타입과는 달리 참조 타입은 하나의 인스턴스가 참조를 통해 여러 곳에서 접근하는 참조 타입이기 때문에 언제 메모리에서 해제되는지가 중요한데요.<br>
+만약 인스턴스가 적절한 시점에 메모리에서 해제되지 않는다면 한정적인 메모리 자원을 낭비하고, 이것이 성능 저하로 이어지게 된다고 합니다.
+
+그래서 스위프트는 프로그램의 메모리 사용을 관리하기 위하여 메모리 관리 기법인 ARC를 사용합니다.
+
+> 레퍼런스 카운팅은 오직 클래스의 인스턴스에만 적용된다. 구조체와 Enum은 값 타입이기 때문에 참조(reference)가 저장되거나 전달되는 일이 없다.
+
+
+
+Thanks for your reading, this article is provided by [Pino](https://github.com/92pino) If reproduced,
+please indicate the source：
+Pino（[https://github.com/92pino](https://github.com/92pino)）
