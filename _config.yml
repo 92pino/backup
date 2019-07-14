@@ -121,10 +121,10 @@ index_with_subtitle: false
 menu:
   home: /
   categories: /categories/
-  review: /review/
-  about: /about/
+  # review: /review/
+  # about: /about/
   tags: /tags/
-  # Résumé : https://www.notion.so/HAEUN-3817f3e8065c4b14a9a4e4feb00bb0e9
+  Résumé : https://trello.com/b/A4uJsWdw/resume
   # sitemap: /sitemap.xml
   #commonweal: /404.html
 
