@@ -1,0 +1,39 @@
+---
+title: Swift - 연산 프로퍼티 - Computed Properties
+layout: post
+date: 2019-09-10 00:00
+image: /assets/images/markdown.jpg
+headerImage: false
+tag: Swift
+category: swift
+author: pino
+description:
+---
+
+
+안녕하세요 [Pino](https://92pino.github.io) 입니다.<br>
+
+엄청 오랜만에 포스팅을 하려하는데요
+이제 iOS 교육과정도 끝났으니 다시 꾸준히 포스팅 하도록 하겠습니다.!!! :]
+오늘은 저번에 이어서 프로퍼티 종류 중 __연산 프로퍼티(Computed Properties)__ 에 대해 포스팅하려합니다.<br>
+
+저장프로퍼티에 대해서 이해가 잘 안가시면 한번 읽고와주세요~
+
+<a style="color: #2e9fff; font-weight:bold; font-size:30px;" href="https://92pino.github.io/swift/2019/06/16/Swift-Properties/">저장 프로퍼티</a>
+
+---
+
+연산 프로퍼티는 [저장 프로퍼티](https://92pino.github.io/swift/2019/06/16/Swift-Properties/)처럼 실제 값을 저장하는 프로퍼티가 아니라 특정 상태에 따른 값을 연산하는 프로퍼티입니다.
+
+연산 프로퍼티는 인스턴스 내/외부의 값을 연산하여 적절한 값을 돌려주는 접근자의 역할이나 은닉화된 내부의 프로퍼티 값을 간접적으로 설정하는 설정자의 역할을 할 수 있습니다.
+
+다음번에는 [연산 프로퍼티]()에 대해 포스팅을 하겠습니다. :)
+
+## 참고
+- swift 공식 문서 - [The Swift Programming Language](https://docs.swift.org/swift-book/LanguageGuide/Properties.html)
+- zedd님 - [Stored Properties](https://zeddios.tistory.com/243)
+- 야곰님 - 스위프트 프로그래밍
+
+Thanks for your reading, this article is provided by [Pino](https://github.com/92pino) If reproduced,
+please indicate the source：
+Pino（[https://github.com/92pino](https://github.com/92pino)）
